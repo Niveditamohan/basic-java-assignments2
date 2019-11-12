@@ -1,10 +1,10 @@
-package com.training.stringreverse.test;
+package com.training.stringchopper.test;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.training.stringreverse.StringChopper;
+import com.training.stringchopper.StringChopper;
 import com.training.stringreverse.exception.WordNotFoundException;
 
 public class TestSpaceTrimmerAndWordDeleter {
@@ -21,6 +21,7 @@ public class TestSpaceTrimmerAndWordDeleter {
 	
 	/**
 	 * Tests the detect and delete word operation of the String Chopper class
+	 * @throws WordNotFoundException
 	 */
 	@Test
 	public void testWordDetectionAndDeleteIfPresent() throws WordNotFoundException {
@@ -31,6 +32,7 @@ public class TestSpaceTrimmerAndWordDeleter {
 	
 	/**
 	 * Tests the space trimmer operation of the String Chopper class when it throws exception
+	 * @throws WordNotFoundException
 	 */
 	@Test(expected = WordNotFoundException.class)
 	public void testWordDetectionAndThrowExceptionIfWordNotFound() throws WordNotFoundException {

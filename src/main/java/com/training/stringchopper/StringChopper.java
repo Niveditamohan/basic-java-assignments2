@@ -1,4 +1,4 @@
-package com.training.stringreverse;
+package com.training.stringchopper;
 
 import com.training.stringreverse.exception.WordNotFoundException;
 
@@ -19,8 +19,11 @@ public class StringChopper {
 
 	/**
 	 * Deletes a word whose position is specified by the user
+	 * 
+	 * @return Returns the new trimmed string
+	 * @throws WordNotFoundException
 	 */
-	public static Object deleteWord(String input, String word, int position) throws WordNotFoundException {
+	public static String deleteWord(String input, String word, int position) throws WordNotFoundException {
 		String trimmedString = deleteSpaces(input);
 		String[] trimmedStringWords = trimmedString.split(" ");
 
